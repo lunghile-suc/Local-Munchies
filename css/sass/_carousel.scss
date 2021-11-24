@@ -1,0 +1,83 @@
+.carousel-content{
+    height: 100vh;
+    width: 100%;
+    z-index: -100;
+    overflow: hidden;
+
+    @include mediaQuery(992px){
+        position: absolute;
+        top: 0;
+    }
+
+    .slider-items{
+        height: 100vh;
+        @include displayFlex(column, center ,initial);
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        h1{
+            // color: $gold;
+            font-size: clamp(2.5rem, 5vw, 6rem);
+            margin: 0 0 1rem 0 ;
+            z-index: 1;
+
+            @include mediaQuery(600px){
+                font-size: 3.5rem;
+            }
+
+            @include mediaQuery(992px){
+                margin: 7rem 0 0 0 ;
+            }
+        }
+
+        h3{
+            color: $white;
+            font-size: clamp(1.3rem, 5vw, 6rem);
+            margin: 0 0 1.5rem 0 ;
+            letter-spacing: 2px;      
+            z-index: 1;
+            text-align: left;
+
+            @include mediaQuery(600px){
+                font-size: 1.4rem;
+            }
+
+            @include mediaQuery(992px){
+                margin: 1rem 0 3rem;
+            }
+        }
+    }
+
+    .slider-1{
+        background-image: url(../../images/bg-1.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+    }
+
+    .order-btn a{
+        display: inline-block;
+        padding: .7rem 1rem;
+        background-color: $gold;
+        color: $white;
+        z-index: 100;
+
+        &:hover{
+            color: $gold;
+            background-color: $white;
+            border: .5px solid $gold;
+            transition: all .5s;
+        }
+    }
+}

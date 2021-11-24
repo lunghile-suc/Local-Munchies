@@ -1,0 +1,107 @@
+$black:#000000;
+$secondaryblack:#141313;
+$lightblack:#343434;
+$gold:#C8A97F;
+$grey: #808080;
+$lightgrey:#FAFAFA;
+$white:#FFFFFF;
+
+// imports //
+// mixins
+@import 'mixins';
+
+// header
+@import 'header';
+
+// navbar
+@import 'nav-bar';
+
+// carousel
+@import 'carousel';
+
+// about
+@import 'about';
+
+// menu
+@import 'menu';
+
+// contact
+@import 'contact';
+
+@import 'services';
+
+// footer
+@import 'footer';
+
+// hero
+@import 'hero';
+
+@import 'cart';
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $white;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+// resets
+img{
+    width: 100%;
+    max-width: 100%;
+}
+
+p{
+    font-size: 1.2rem;
+    line-height: 30px;
+}
+
+.header{
+    margin-top: 5rem;
+    font-size: clamp(1.7rem, 5vw, 2rem);
+    letter-spacing: 2px;
+
+    @include mediaQuery(600px){
+        font-size: 2.5rem;
+    }
+}
+
+.cursive-hd{
+    position: relative;
+    margin-bottom: -1rem;
+    font-family: cursive;
+    color: $gold;
+}
+
+.container{
+    padding: 0 15px;
+    width: 100%;
+    margin: 0 auto;
+
+    @include mediaQuery(480px){
+        max-width: 570px;
+    }
+
+    @include mediaQuery(768px){
+        max-width: 720px;
+    }
+
+    @include mediaQuery(992px){
+        max-width: 960px;
+    }
+
+    @include mediaQuery(1200px){
+        max-width: 1140px;
+    }
+}
+
+.error{
+    color: red;
+}

@@ -1,0 +1,19 @@
+// mixins
+
+@mixin displayFlex ($flexDirection, $justifyContent, $alignItems){
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+@mixin displayGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+@mixin mediaQuery ($minSize) {
+    @media screen and (min-width: $minSize){
+        @content
+    }
+}

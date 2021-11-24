@@ -1,0 +1,195 @@
+.about-section{
+    margin-top: 5rem;
+    margin-bottom: 4rem;
+
+    .content-items{
+        
+        @include mediaQuery(768px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 2rem;
+        }
+        
+        .about-imgs{
+    
+            .abt-img{
+                width: 100%;
+            }
+        }
+
+        .about-header{
+            margin-top: 2rem;
+
+            @include mediaQuery(768px){
+                margin-top: 0;
+            }
+
+            @include mediaQuery(992px){
+                margin-top: 2rem;
+            }
+        }
+
+        .about-desc{
+            margin-top: 2rem;
+    
+            p{
+                color: $grey;
+            }
+    
+            .weekly-openings{
+                margin: 1.6rem 0;
+                span{
+                    font-weight: bold;
+                }
+            }
+    
+            .tel{
+                font-size: 1.4rem;
+                font-weight: bold;
+                color: $gold;
+
+                @include mediaQuery(768px){
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+    .about-counters{
+        margin-top: 4rem;
+
+        @include mediaQuery(768px){
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            align-items: center;
+        }
+
+        .counter-items{
+            margin-bottom: 1rem;
+            @include mediaQuery(768px){
+                @include displayGrid();
+            }
+        }
+
+        text-align: center;
+        span{
+            margin-top: 2rem;
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: $gold;
+        }
+
+        p{
+            font-size: 1rem;
+            color: $grey;
+        }  
+    }
+
+    .items-increment{
+        margin: .5rem 0;
+
+        input{  
+            outline: none;
+            padding: .5rem 1rem;
+            margin: .5rem 0;
+            font-size: 1rem;
+            border: .5px solid $grey;
+        }
+
+        input[type="button"]{
+            background-color: $white;
+        }
+
+        input[type="text"]{
+            text-align: center;
+        }
+    }
+
+    .input-btn{
+        margin: 1rem 0;
+        a{
+            display: block;
+            color: $white;
+            padding: 1rem;
+            background-color: $gold;
+            text-align: center;
+
+            &:hover{
+                color: $gold;
+                background-color: $white;
+                border: .5px solid $gold;
+                transition: all .5s;
+            }
+
+            @include mediaQuery(768px){
+                display: inline-block;
+            }
+        }
+    }
+
+    form{
+        margin: 2rem 0;
+    }
+
+    .input-items{
+        @include mediaQuery(768px){
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-column-gap: 1rem;
+        }
+        
+        label{
+            font-weight: 600;
+        }
+
+        input, select, textarea{
+            display: block;
+            outline: none;
+            width: 80%;
+            padding: .7rem;
+            margin: .5rem 0 1.5rem 0;
+            font-size: 1rem;
+            border: .5px solid $grey;
+
+            &:focus{
+                border: 1px solid black;
+            }
+        }
+    }
+}
+
+textarea{
+    display: block;
+    outline: none;
+    padding: 1rem;
+    margin: 1rem 0;
+    font-size: 1rem;
+    border: .5px solid $grey;
+
+    &:focus{
+        border: 1px solid black;
+    }
+}
+
+.input-btn1{
+    margin: 1rem 0;
+    display: block;
+    color: $white;
+    padding: 1rem;
+    background-color: $gold;
+    border: none;
+    text-align: center;
+
+    &:hover{
+        color: $gold;
+        background-color: $white;
+        border: .5px solid $gold;
+        transition: all .5s;
+    }
+
+    @include mediaQuery(768px){
+        display: inline-block;
+    }
+    
+}

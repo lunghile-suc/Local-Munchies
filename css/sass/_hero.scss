@@ -1,0 +1,41 @@
+.hero{
+    position: relative;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-image: url(../../images/bg-1.jpg);
+    width: 100%;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .6);
+    }
+
+    .hero-contents{
+        display: grid;
+        justify-content: center;
+        position: relative;
+        bottom: 3rem;
+
+        h1{
+            font-size: 3.5rem;
+            color: $white;
+        }
+
+        .hero-links{
+            text-align: center;
+            margin-top: 1rem;
+            a{
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                color: $white;
+                font-size: .8rem;
+            }
+        }
+    }
+}

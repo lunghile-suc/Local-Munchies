@@ -1,0 +1,29 @@
+.services-section{
+    margin: 0 0 6rem 0;
+    padding: 2rem 0;
+    background-color: $lightgrey;
+    text-align: center;
+
+    .services-items{
+        @include displayGrid();
+        margin-top: 5rem;
+
+        .services-item{
+            padding: 1rem;
+            margin: 2rem 0;
+
+            i{
+                font-size: 2.5rem;
+                color: $gold;
+            }
+
+            h3{
+                margin: 1rem 0;
+            }
+
+            p{
+                color: $grey;
+            }
+        }
+    }
+}

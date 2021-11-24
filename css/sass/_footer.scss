@@ -1,0 +1,119 @@
+footer{
+    padding: 7rem 0;
+    background-color: $black;
+
+    .footer-items{
+
+        @include mediaQuery(768px){
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 2rem;
+        }
+        
+        @include mediaQuery(992px){
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+    }
+
+    h4{
+        margin: 3rem 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: $white;
+    }
+
+    p{
+        color: $grey;
+        font-size: 1rem;
+    }
+
+    .social-icons{
+        margin: 1rem 0;
+
+        i{
+            font-size: 1.2rem;
+            color: $white;
+            background-color: $lightblack;
+            margin-right: .5rem;
+            padding: 1rem;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+    }
+
+    .item-2{
+        p{
+            display: flex;
+            justify-content: space-between;
+            width: 250px;
+        }
+    }
+
+    .item-3{
+        
+        a{
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100px;
+            width: 100%;
+            display: block;
+        }
+
+        .insta-imgs-1{
+            @include mediaQuery(600px){
+                display: flex;
+            }
+            .img-1{
+                background-image: url(../../images/insta-1.jpg);
+            }
+    
+            .img-2{
+                background-image: url(../../images/insta-2.jpg);
+            }
+    
+            .img-3{
+                background-image: url(../../images/insta-3.jpg);
+            }
+        }
+
+        .insta-imgs-2{
+            display: flex;
+
+            .img-4{
+                background-image: url(../../images/insta-4.jpg);
+            }
+
+            .img-5{
+                background-image: url(../../images/insta-5.jpg);
+            }
+
+            .img-6{
+                background-image: url(../../images/insta-6.jpg);
+            }
+        }
+    }
+
+    .item-4{
+        input{
+            display: block;
+            width: 100%;
+            margin: 1rem 0;
+            padding: 1rem;
+            text-align: center;
+            font-size: 1rem;
+            outline: none;
+            border: none;
+            color: $lightgrey;
+        }
+
+        .ipt{
+            background-color: $lightblack;
+        }
+
+        .btn{
+            background-color: $gold;
+        }
+    }
+}

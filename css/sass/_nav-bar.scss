@@ -1,0 +1,147 @@
+nav{
+    width: 100%;
+    background-color: $black;
+    padding: 1rem 0;
+    z-index: 100;
+
+    @include mediaQuery(992px){
+        background-color: initial;
+    }
+
+    .logo{
+        font-size: 1.3rem;
+        font-weight: 800;
+        letter-spacing: 1.5px;
+        color: $white;
+    }
+
+    ul{
+        position: fixed;
+        display: none;
+        left: 0;
+        top: 3.5rem;
+        width: 100%;
+        background-color: $black;
+
+        @include mediaQuery(992px){
+            display: flex;
+            background-color: initial;
+
+            .container{
+                @include displayFlex(initial, flex-end, center);
+                width: 90%;
+                right: 0;
+                left: initial;
+            }
+            
+        }
+
+        a{
+            display: block;
+            color: $white;
+            padding: 1rem 0;
+
+            @include mediaQuery(992px){
+                padding: 1rem;
+            }
+        }
+
+        .book-table{
+            background-color: $gold;
+            margin-bottom: 1rem;
+            border-radius: .3rem;
+            padding-left: 0.5rem;
+
+            @include mediaQuery(992px){
+                padding-left: 0;
+                padding-right: 0;
+                padding-top: 0;
+                margin: 0;
+            }
+        }
+    }
+    
+    .burger{
+        @include displayFlex(initial, center, center);
+        position: fixed;
+        right: 1rem;
+        top: 1.3rem;
+
+        @include mediaQuery(600px){
+            right: 3rem;
+        }
+
+        @include mediaQuery(992px){
+            display: none;
+        }
+
+        .line{
+            width: 20px;
+            height: 2px;
+            margin: 4px;
+            background-color: $grey;
+        }
+
+        span{
+            color: $grey;
+            font-weight: 600;
+        }
+    }
+}
+.active{
+    display: block;
+}
+
+nav.scrolled{
+    background-color: $black;
+    position: fixed;
+    top: 0;
+
+    .logo{
+        color: $white;
+
+        @include mediaQuery(992px){
+            position: absolute;
+            line-height: 18px;
+            z-index: 100;
+        }
+    }
+    background-color: $black;
+}
+
+ul.scrolled{
+    background-color: $black;
+    position: fixed;
+    z-index: -1;
+
+    @include mediaQuery(992px){
+        top: 0;
+    }
+
+    a{
+        color: $white;
+    }
+
+    .book-table{
+        color: $white;
+
+        @include mediaQuery(992px){
+            border-radius: 0;
+        }
+    }
+}
+
+a.active{
+    color: $gold;
+}
+
+.cartCount{
+    position: relative;
+    top: -0.5rem;
+    background-color: azure;
+    width: 20px;
+    padding: .1rem .3rem;
+    height: 20px;
+    border-radius: 50px;
+    color: $black;
+}
